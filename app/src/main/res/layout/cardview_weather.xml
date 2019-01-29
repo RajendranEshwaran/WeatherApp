@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:id="@+id/cv_weather"
+    card_view:cardBackgroundColor="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rv_weather_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_light">
+            <ImageView
+                android:id="@+id/iv_weather_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="@dimen/cardview_text_margin"
+                android:src="@drawable/sw_01"
+                android:layout_centerVertical="true" />
+            <RelativeLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_weather_icon"
+                android:layout_toEndOf="@+id/iv_weather_icon">
+                <TextView
+                    android:id="@+id/tv_degree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="20,5"
+                    android:textSize="60sp"
+                    android:textColor="@color/white"
+                    android:layout_alignTop="@+id/iv_celsius"
+                    android:layout_alignLeft="@+id/tv_desc_humidity"
+                    android:layout_alignStart="@+id/tv_desc_humidity" />
+                <ImageView
+                    android:id="@+id/iv_celsius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/celsius"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/tv_degree"
+                    android:layout_toEndOf="@+id/tv_degree"
+                    android:layout_margin="@dimen/cardview_text_margin" />
+                <TextView
+                    android:id="@+id/tv_desc_humidity"
+                    android:text="@string/humidity"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/cardview_text_margin"
+                    android:layout_below="@+id/tv_degree" />
+                <TextView
+                    android:id="@+id/tv_humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_below="@+id/tv_degree"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    tools:text="20 %"
+                    android:layout_marginRight="@dimen/cardview_text_margin"
+                    android:layout_marginEnd="@dimen/cardview_text_margin"
+                    />
+                <TextView
+                    android:id="@+id/tv_desc_wind"
+                    android:text="@string/wind"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_humidity"
+                    android:layout_marginRight="@dimen/cardview_text_margin"
+                    android:layout_marginLeft="@dimen/cardview_text_margin" />
+                <TextView
+                    android:id="@+id/tv_wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    tools:text="20 %"
+                    android:layout_marginRight="@dimen/cardview_text_margin"
+                    android:layout_marginEnd="@dimen/cardview_text_margin"
+                    android:layout_below="@+id/tv_humidity"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+                <TextView
+                    android:id="@+id/tv_desc_rain_level"
+                    android:text="@string/precipitation"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="@dimen/cardview_text_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_wind"
+                    android:layout_marginLeft="@dimen/cardview_text_margin" />
+                <TextView
+                    android:id="@+id/tv_rain_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    tools:text="20 %"
+                    android:layout_marginBottom="@dimen/cardview_text_margin"
+                    android:layout_marginRight="@dimen/cardview_text_margin"
+                    android:layout_marginEnd="@dimen/cardview_text_margin"
+                    android:layout_below="@+id/tv_wind"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rv_weather_block"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/tv_city_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/cardview_text_margin"
+                android:textColor="@color/grey"
+                tools:text="Paris"
+                android:layout_centerVertical="true" />
+            <ImageView
+                android:id="@+id/iv_trash"
+                android:layout_width="@dimen/size_trash"
+                android:layout_height="@dimen/size_trash"
+                android:src="@drawable/trash"
+                android:layout_margin="@dimen/cardview_text_margin"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
